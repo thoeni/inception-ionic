@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $state, $ionicModal, $ionicHistory, $timeout) {
   
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -36,9 +36,28 @@ angular.module('starter.controllers', [])
     // Simulate a login delay. Remove this and replace with your login
     // code if using a login system
     $timeout(function() {
-      $scope.closeLogin();
+      if ($scope.loginData.username === 'test' && $scope.loginData.password === 'test') {
+        console.log('Credentials correct!');
+        $scope.loggedIn = true;
+        $ionicHistory.nextViewOptions({
+          historyRoot: true
+        });
+        $scope.closeLogin();
+        $state.go('app.navigate')
+      } else {
+        console.log('Wrong uname/pwd');
+      }
     }, 1000);
   };
+
+  $scope.doLogout = function() {
+    console.log('Doing logout');
+    $scope.loggedIn = false;
+    $ionicHistory.nextViewOptions({
+      historyRoot: true
+    });
+    $state.go('login')
+  }
 })
 
 .controller('PlaylistsCtrl', function($scope) {
