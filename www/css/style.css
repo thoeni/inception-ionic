@@ -34,3 +34,26 @@
     background-color: #631F3A;
     border-color: #3d1323;
 }
+
+.navigate-image {
+    max-width:750px;
+    max-height:350px;
+    width: 100%;
+    height: auto;
+}
+
+.navigate-item {
+    position: relative;
+}
+
+.navigate-item h2 {
+    font-family: 'Cookie', cursive;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+    width: 100%;
+    padding-left: 10px;
+}
