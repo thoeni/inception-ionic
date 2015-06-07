@@ -1,12 +1,16 @@
 /* Empty. Add your own CSS if you like */
 
-#combwine-logo-container {
+.combwine-logo-container {
     font-family: 'Lato', sans-serif;
     font-size: 3em;
     font-weight: 100;
     color: #631f3a;
     text-align: center;
-    margin: 80px 0;
+    padding: 20% 0;
+}
+
+.platform-android . combwine-logo-container {
+    background: #0000fe;
 }
 
 .menu-title {
@@ -17,14 +21,16 @@
 }
 
 .combwine-logo {
-    width: 15%;
-    margin-bottom: 20px;
+    fill: #631f3a;
+    max-width: 15%;
+    max-height: 15%;
+    margin-bottom: 5%;
 }
 
 .button.button-positive,
 .button.button-positive.active,
 .button.button-positive.activated,
 .button.button-positive.button-outline {
-    background-color: #631f3a;
+    background-color: #631F3A;
     border-color: #3d1323;
 }
