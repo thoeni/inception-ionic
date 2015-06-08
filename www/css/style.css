@@ -49,11 +49,11 @@
 .navigate-item h2 {
     font-family: 'Cookie', cursive;
     font-size: 30px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     position: absolute;
     bottom: 20px;
-    left: 0px;
+    left: 0;
     width: 100%;
-    padding-left: 10px;
+    padding-left: 20px;
 }
